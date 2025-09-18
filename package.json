@@ -5,9 +5,10 @@
   "scripts": {
     "build": "rm -rf dist && webpack --mode production",
     "dev": "webpack serve --open",
-    "homepage": "https://AndreyAlexsandrovich/Network.git",
+    "homepage": ".",
+    "gh-pages-clean": "rimraf node_modules/.cache/gh-pages",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run gh-pages-clean && gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
