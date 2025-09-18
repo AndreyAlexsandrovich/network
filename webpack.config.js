@@ -11,9 +11,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
-    publicPath: isProd ? "/network/" : "/",
+    publicPath: "auto",
   },
-  mode: isProd ? "production" : "development",
+  // mode: isProd ? "production" : "development",
   devServer: {
     static: path.resolve(__dirname, "./dist"),
     compress: true,
