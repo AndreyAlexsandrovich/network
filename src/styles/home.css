@@ -1,0 +1,126 @@
+@import '@components/product/product.css';
+@import '@components/popup/popup.css';
+
+.main-container {
+    max-width: 1100px;
+    max-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile {
+    background-color: #fff;
+}
+
+.profile-content { 
+    display: flex;
+    gap: 30px;
+    padding: 3px;
+    align-items: start;
+}
+
+.profile__image-wrapper {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-edit-button { 
+    cursor: pointer;
+    background-color: #4299e1;
+    color: #ffff;
+    padding: 5px;
+    width: 100%;
+    transition: background-color .2s ease-in-out;
+}
+
+.profile-edit-button:hover { 
+    background-color: #3881bd;
+    transition: background-color .1s ease-in-out;
+}
+
+.profile__image-wrapper img {
+    object-fit: cover;
+}
+
+.profile-head {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.profile-head .person-info {
+    gap: 0;
+}
+
+.profile-name {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.profession {
+    font-size: 10px;
+    font-weight: 400;
+    color: #757575;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title-about-me {
+    color: var(--color-main);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.description-about-me {
+    font-size: 14px;
+    color: var(--color-main);
+    max-width: 600px;
+}
+
+.button-create-product-wrapper {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.products { 
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.create-product {
+    width: 100%;
+    padding: 20px;
+    border: dashed 3px rgba(0, 0, 0, 0.274);
+    color: rgba(0, 0, 0, 0.274);
+    transition: all .2s ease-in-out;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.create-product:hover { 
+    border: dashed 3px rgba(0, 0, 0, 0.178);
+    color: rgba(0, 0, 0, 0.178);
+    transition: all .2s ease-in-out;
+}

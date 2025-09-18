@@ -1,0 +1,36 @@
+.search { 
+    padding: 30px;
+    text-align: center;
+     background-color: #F3D250;
+     width: 100%;
+     margin-bottom: 30px;
+}
+
+form { 
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-search { 
+    background-color: #fff;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.button-search { 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: ease-in-out background-color .3s;
+}
+
+.button-search:hover { 
+    background-color: #00000025;
+    transition: ease-in-out background-color .3s;
+}

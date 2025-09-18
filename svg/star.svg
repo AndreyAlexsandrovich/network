@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" >
+<symbol id="star">
+    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8 1.75-2.25 4-4 .5 3 3.5-1 4.5 4.25-2 4.25 2-1-4.5 3-3.5-4-.5z"/>
+</symbol>
+</svg>

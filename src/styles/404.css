@@ -1,0 +1,24 @@
+.error-content { 
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.error-content .error-text { 
+    font-size: 40px;
+    font-family: "Noto Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+
+.error-content .profile-link { 
+    font-size: 14px;
+    color: #b1b1b1;
+}
+
+.error-content .profile-link:hover { 
+    text-decoration: underline;
+}

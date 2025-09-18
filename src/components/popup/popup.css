@@ -1,0 +1,96 @@
+.popup {
+    background: rgba(0,0,0,0.5); 
+    z-index: 1000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
+
+.popup__form {
+    align-self: center;
+    background-color: #fff;
+    border-radius: 6px;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    width: 350px;
+    max-width: 100%;
+}
+
+.toolbar { 
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
+}
+
+.button-close { 
+    padding: 5px;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+
+.button-close:hover { 
+    transform: scale(1.2);
+    transition: transform .2s ease-in-out;
+}
+
+.popup__form-title {
+    font-weight: 700;
+    font-size: 24px;
+}
+.popup__input-wrapper {
+    margin-bottom: 18px;
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+
+.popup__input-wrapper input {
+    width: 100%;
+    padding: 8px;
+}
+
+.popup__input-wrapper:last-child { 
+    margin-bottom: 0;
+}
+
+.popup__input-wrapper_type_image_product { 
+    border-bottom: none;
+}
+
+.popup__label_type_image { 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #4299e1;
+    cursor: pointer;
+    color: #ffff;
+    fill: #ffff;
+    padding: 10px;
+    transition: background-color .2s ease-in-out;
+    font-weight: 700;
+}
+
+.save-button { 
+    width: 100%;
+    background-color: #4299e1;
+    padding: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+.profile-save:hover { 
+    background-color: #3881bd;
+    transition: background-color .1s ease-in-out;
+}

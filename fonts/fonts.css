@@ -1,0 +1,15 @@
+@font-face { 
+    font-family: "Noto Sans", sans-serif;
+    src: local("NotoSans_Condensed-Regular"),
+    local("NotoSans Condensed Regular"),
+    url("NotoSans_Condensed-Regular.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face { 
+    font-family: "Noto Sans", sans-serif;
+    src: local("NotoSans Condensed Bold"),
+    local("NotoSans_Condensed-Bold"),
+    url("NotoSans_Condensed-Bold.woff") format("woff");
+    font-weight: 700;
+}
