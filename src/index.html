@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+     <% for (const css of htmlWebpackPlugin.files.css) {  %>
+          <script src="<%= css %>"></script>
+   <% } %>
     <title>Network - Бери и Покупай у других!</title>
     <style type="text/tailwindcss">
       @theme {
@@ -89,6 +92,9 @@
       </div>
       </section>
     </main>
+     <% for (const js of htmlWebpackPlugin.files.js) {  %>
+          <script src="<%= js %>"></script>
+   <% } %>
   </body>
 
   <template id="template-product">
