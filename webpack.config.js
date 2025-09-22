@@ -4,22 +4,20 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (argv) => {
-  const isProd = argv.mode === "production";
-  const repoName = 'network'
   return {
+
     entry: {
       main: "./src/index.js",
     },
-    output: {
-      path: path.resolve(__dirname, "dist"),
-      filename: "[name].js",
-      publicPath: isProd ? `/${repoName}/` : "/",
+      output: {
+        path: path.resolve(__dirname, "dist"),
+        filename: "[name].js",
+      publicPath: '',
     },
-    mode: isProd ? "production" : "development",
+    mode: "development",
     devServer: {
       static: {
         directory: path.resolve(__dirname, "dist"),
-        publicPath:  "/",
       },
       compress: true,
       port: 8080,

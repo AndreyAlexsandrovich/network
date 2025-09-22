@@ -9,9 +9,7 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Tailwind -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <% for (const css of htmlWebpackPlugin.files.css) { %>
-      <link href="<%= css %>" rel="stylesheet" />
-    <% } %>
+   
     <title>Network - Бери и Покупай у других!</title>
     <style type="text/tailwindcss">
       @theme {
@@ -268,9 +266,7 @@
       </form>
 
     </div>
-     <% for (const js of htmlWebpackPlugin.files.js) {  %>
-          <script src="<%= js %>"></script>
-   <% } %>
+
   </body>
   <template id="template-product">
     <article>
