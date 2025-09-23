@@ -80,13 +80,12 @@
         <section class="section-search">
           <div class="content">
              <div class="search">
-                 <form id="live-search" action="">
-                     <input type="text" placeholder="Что найти товар напишите его названия..." class="input-search">
+                 <form id="form-search" action="">
+                     <input type="text" placeholder="Что найти товар напишите его названия..." class="input-search" id="input-search">
                      <button class="button-search" type="submit">
                        <i class="ph ph-magnifying-glass"></i>
                      </button>
                  </form>
-               <div class="search-results"></div>
              </div>
              <div class="place">
                  <ul id="places__list">
@@ -98,34 +97,34 @@
     </div>
 
 </body>
+<template id="template-product">
+ <article>
+   <li class="product" id="">
+     <div class="product-container">
+       <div class="title-wrapper">
+         <h2 class="title-product" id="title-product"></h2>
+       </div>
+       <div class="image-product-wrapper">
+         <img
+           src=""
+           alt="Обложка товара"
+           class="image-product"
+           id="image-product"
+         />
+       </div>
+       <div class="description-product-wrapper">
+         <p class="description-product" id="description"></p>
+       </div>
+       <div class="price-product">
+         <p class="price" id="price-product"></p>
+       </div>
+       <div class="buy-product">
+         <button class="buy">Купить товар</button>
+       </div>
+     </div>
+   </li>
+ </article>
+     </template>
 
 
- <template id="template-product">
-  <article>
-    <li class="product" id="">
-      <div class="product-container">
-        <div class="title-wrapper">
-          <h2 class="title-product" id="title-product"></h2>
-        </div>
-        <div class="image-product-wrapper">
-          <img
-            src=""
-            alt="Обложка товара"
-            class="image-product"
-            id="image-product"
-          />
-        </div>
-        <div class="description-product-wrapper">
-          <p class="description-product" id="description"></p>
-        </div>
-        <div class="price-product">
-          <p class="price" id="price-product"></p>
-        </div>
-        <div class="buy-product">
-          <button class="buy">Купить товар</button>
-        </div>
-      </div>
-    </li>
-  </article>
-      </template>
 </html>

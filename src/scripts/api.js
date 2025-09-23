@@ -1,5 +1,4 @@
-export default function apiProducts() {
-  const place = document.querySelector("#places__list");
+export default function apiProducts(place) {
 
   if (!place) {
     return;

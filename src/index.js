@@ -1,13 +1,18 @@
 import initSideBar from "./scripts/sidebarButton.js";
 import apiProducts from "./scripts/api.js";
 import createProduct from "./scripts/createProduct.js";
-import searchProducts from "./scripts/searchProducts.js"
+import searchProduct from "./scripts/searchProducts.js";
+const place = document.querySelector("#places__list");
 
 document.addEventListener("DOMContentLoaded", () => {
   initSideBar();
-  apiProducts();
-  if (document.querySelector(".popup-product")) { 
+  apiProducts(place);
+  if (document.querySelector(".popup-product")) {
     createProduct();
+  }
+
+  if (document.querySelector("#form-search")) {
+    searchProduct(place);
   }
 });
 
