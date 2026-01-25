@@ -3,7 +3,7 @@
     max-width: 500px;
 }
 
-.product-container { 
+.product-container {
     text-align: center;
     max-width: 500px;
     min-height: 100%;
@@ -19,29 +19,30 @@
 }
 
 .image-product-wrapper {
-   width: 500px;
-   height: 3%;
-   overflow: hidden;
+    width: 500px;
+    height: 3%;
+    overflow: hidden;
 }
 
 .image-product {
     width: 100%;
-  height: 100%;
-  object-fit: contain; /* или cover */
-  display: block; 
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .description-product-wrapper {
     padding: 10px 5px 10px 5px;
     height: 300px;
 }
+
 .description-product {
     color: #000;
     font-weight: bold;
 }
 
 .price-product {
-   padding: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
 }
 
 .price {
@@ -53,6 +54,7 @@
     max-width: 100%;
     margin-top: auto;
 }
+
 .buy {
     background-color: #F3D250;
     color: #000;
@@ -65,8 +67,8 @@
 
 /* effect hover */
 
-.buy:hover { 
-    background-color: #000;
-    color: #F3D250;
-    transition: color .4s ease-in-out, background-color .5s ease-in-out;
-}
+.buy:hover {
+        background-color: #000;
+        color: #F3D250;
+        transition: color .4s ease-in-out, background-color .5s ease-in-out;
+    }

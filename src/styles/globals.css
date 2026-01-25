@@ -45,6 +45,10 @@ ol {
   white-space: nowrap;
 }
 
+input { 
+  width: 100%;
+  padding: 10px;
+}
 
 input:focus, button:focus, li:focus, a:focus { 
   outline: none;
@@ -52,4 +56,9 @@ input:focus, button:focus, li:focus, a:focus {
 
 input:focus-visible, button:focus-visible, a:focus-visible { 
   outline: 1px #000 solid;
+}
+
+
+fieldset { 
+  border: none;
 }

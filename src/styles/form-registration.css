@@ -1,0 +1,43 @@
+
+
+.container { 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header { 
+    padding: 30px 0 30px 0;
+}
+
+.header__title { 
+    font-size: clamp(26px, calc(20.909px + 1.591vw), 40px);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+}
+
+.registration { 
+    display: flex;
+    justify-content: center;
+}
+
+.form__registration-title { 
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.registry { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: clamp(300px, calc(190.909px + 34.091vw), 600px);
+    border: 2px solid #fff;
+    padding: 30px;
+}
+
+.button-registry { 
+    padding: 10px;
+}

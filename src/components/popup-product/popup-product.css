@@ -1,0 +1,31 @@
+.popup-content {
+    background-color: #fff;
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.popup-content__image {}
+
+.popup-content__image img {}
+
+.popup-content__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.popup-content__title-product {}
+
+.popup-content__title-product h3 {}
+
+.popup-content__description {}
+
+.popup-content__description p {} 

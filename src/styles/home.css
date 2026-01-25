@@ -12,86 +12,85 @@
 
 .profile {
     background-color: #fff;
+    /* display: none; */
+    border-radius: 0 0 10px 10px;
+    flex-grow: 1;
 }
 
 .profile-content { 
     display: flex;
+    flex-direction: column;
     gap: 30px;
-    padding: 3px;
+    padding: 20px;
     align-items: start;
-}
-
-.profile__image-wrapper {
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-.profile-edit-button { 
-    cursor: pointer;
-    background-color: #4299e1;
-    color: #ffff;
-    padding: 5px;
     width: 100%;
-    transition: background-color .2s ease-in-out;
 }
 
-.profile-edit-button:hover { 
-    background-color: #3881bd;
-    transition: background-color .1s ease-in-out;
+/* Личный кабинет */
+.profile-avatar { 
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border: #000 solid 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 15px #000;
+  position: relative;
+  transition: .3s ease-in-out;
 }
 
-.profile__image-wrapper img {
-    object-fit: cover;
+.profile-button-changes { 
+    cursor: pointer;
 }
 
-.profile-head {
+.profile-avatar .hover-overlay { 
+    position: absolute;
+    top: 0;
+    background-color: #b9b9b990;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    transition: .3s ease-in-out;
+    background-image: url("../../image/pen.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0;
+}
+
+.profile-avatar:hover .hover-overlay { 
+   opacity: 1;
+}
+
+.profile-avatar img { 
+    max-width: 100%;
+}
+
+.profile-information { 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profile-name, .profile-email, .profile-phone { 
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
 }
 
-.profile-head .person-info {
-    gap: 0;
+.name, .email, .phone { 
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.profile-name {
-    font-size: 16px;
-    letter-spacing: 2px;
-    font-weight: 400;
-    text-transform: capitalize;
+.profile-name span, .profile-email span, .profile-phone span { 
+   color: grey;
+   font-size: 14px;
 }
 
-.profession {
-    font-size: 10px;
-    font-weight: 400;
-    color: #757575;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.about-me {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.title-about-me {
-    color: var(--color-main);
-    font-weight: 400;
-    font-size: 18px;
-}
-
-.description-about-me {
-    font-size: 14px;
-    color: var(--color-main);
-    max-width: 600px;
-}
+/* Продукты */
 
 .button-create-product-wrapper {
     max-width: 100%;

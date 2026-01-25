@@ -1,15 +1,19 @@
 /* styles components */
 @import url('@components/sidebar-menu/sidebar-menu.css');
+@import url('@components/popup-product/popup-product.css');
 /* style pages */
 @import url('@styles/globals.css');
 @import url('@styles/home.css');
 @import url('@styles/404.css');
 @import url('@styles/main.css');
 @import url('@styles/searchProducts.css');
+@import url('@styles/form-registration.css');
 /* variables */
 @import url('@variables/variables.css');
 /* utilities */
 @import url('@utilities/utilities.css');
+
+
 
 
 html { 
@@ -20,11 +24,14 @@ body {
     margin: 0;
     font-family: "Noto Sans", sans-serif;
     min-height: 100vh;
-    display: flex;
     background-color: #3182ce;
 }
 
 main {
     flex-grow: 1;
     max-height: 100%;
+}
+
+.layout { 
+    display: flex;
 }

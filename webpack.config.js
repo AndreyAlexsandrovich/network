@@ -3,29 +3,35 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+
 module.exports = (argv) => {
   return {
+
 
     entry: {
       main: "./src/index.js",
     },
-      output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: "[name].js",
-      publicPath: '',
+    output: {
+      path: path.resolve(__dirname, "dist"),
+      filename: "[name].js",
+      assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
+      publicPath: '/',
     },
     mode: "development",
     devServer: {
       static: {
         directory: path.resolve(__dirname, "dist"),
       },
-      compress: true,
+      proxy: [{
+        context: ['/api/**'],
+        target: 'https://jsonplaceholder.typicode.com',
+        pathRewrite: { '^/api': '' },
+        changeOrigin: true,
+        secure: false,
+        logLevel: 'debug'  // ✅ Покажет логи proxy
+      }],
       port: 8080,
-      open: true,
-      historyApiFallback: true,
-    },
-    stats: {
-      children: true,
+      open: false,
     },
     resolve: {
       alias: {
@@ -54,8 +60,11 @@ module.exports = (argv) => {
           exclude: /node_modules/,
         },
         {
-          test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf|jpeg)$/,
+          test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
           type: "asset/resource",
+          generator: {
+            filename: path.join('icons', '[name].[contenthash][ext]'),
+          },
         },
       ],
     },
@@ -80,10 +89,15 @@ module.exports = (argv) => {
         filename: "searchProducts.html",
         chunks: ["main"],
       }),
+      new HtmlWebpackPlugin({
+        template: "./src/pages/registration.html",
+        filename: "registration.html",
+        chunks: ["main"],
+      }),
       new MiniCssExtractPlugin({
         filename: "main.css",
       }),
       new CleanWebpackPlugin(),
     ],
   };
-};
+}; 
