@@ -10,8 +10,6 @@
 @import url('@styles/form-registration.css');
 /* variables */
 @import url('@variables/variables.css');
-/* utilities */
-@import url('@utilities/utilities.css');
 
 
 
@@ -34,4 +32,24 @@ main {
 
 .layout { 
     display: flex;
+}
+
+.button { 
+    background-color: #F3D250;
+    color: #000;
+    transition: color .3s ease-in-out, background-color .4s ease-in-out;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.button:hover { 
+        background-color: #000;
+        color: #F3D250;
+        transition: color .4s ease-in-out, background-color .5s ease-in-out;
 }

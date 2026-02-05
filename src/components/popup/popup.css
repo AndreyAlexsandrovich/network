@@ -1,6 +1,6 @@
 .popup {
-    background: rgba(0,0,0,0.5); 
-    z-index: 1000; 
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -8,7 +8,8 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-   visibility: hidden;
+    visibility: hidden;
+    display: flex;
 }
 
 .popup__form {
@@ -23,21 +24,21 @@
     max-width: 100%;
 }
 
-.toolbar { 
+.toolbar {
     width: 100%;
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 0 25px 0;
 }
 
-.button-close { 
+.button-close {
     padding: 5px;
     cursor: pointer;
     transition: transform .2s ease-in-out;
 }
 
-.button-close:hover { 
+.button-close:hover {
     transform: scale(1.2);
     transition: transform .2s ease-in-out;
 }
@@ -46,6 +47,7 @@
     font-weight: 700;
     font-size: 24px;
 }
+
 .popup__input-wrapper {
     margin-bottom: 18px;
     width: 100%;
@@ -57,15 +59,15 @@
     padding: 8px;
 }
 
-.popup__input-wrapper:last-child { 
+.popup__input-wrapper:last-child {
     margin-bottom: 0;
 }
 
-.popup__input-wrapper_type_image_product { 
+.popup__input-wrapper_type_image_product {
     border-bottom: none;
 }
 
-.popup__label_type_image { 
+.popup__label_type_image {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -78,7 +80,7 @@
     font-weight: 700;
 }
 
-.save-button { 
+.save-button {
     width: 100%;
     background-color: #4299e1;
     padding: 8px;
@@ -89,7 +91,7 @@
     transition: background-color .2s ease-in-out;
 }
 
-.profile-save:hover { 
+.profile-save:hover {
     background-color: #3881bd;
     transition: background-color .1s ease-in-out;
 }

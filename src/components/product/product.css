@@ -54,21 +54,3 @@
     max-width: 100%;
     margin-top: auto;
 }
-
-.buy {
-    background-color: #F3D250;
-    color: #000;
-    transition: color .3s ease-in-out, background-color .4s ease-in-out;
-    width: 100%;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* effect hover */
-
-.buy:hover {
-        background-color: #000;
-        color: #F3D250;
-        transition: color .4s ease-in-out, background-color .5s ease-in-out;
-    }

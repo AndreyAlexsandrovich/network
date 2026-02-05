@@ -39,37 +39,40 @@
         <nav class="nav">
           <div class="menu">
             <ul>
-              <li class="active">
+              <li class="active icon-home">
                 <a href="index.html">
                   <i class="icon ph ph-house text-purple-900"></i>
                   <span class="text text-purple-900">Профиль</span>
                 </a>
               </li>
-              <li>
+              <li class="icon-chats">
                 <a href="404.html">
                   <i class="icon ph ph-chats-circle text-purple-900"></i>
                   <span class="text text-purple-900">Чаты</span>
                 </a>
               </li>
-              <li>
+              <li class="icon-news">
                 <a href="404.html">
                   <i class="icon ph ph-newspaper text-purple-900"></i>
                   <span class="text text-purple-900">Новости</span>
                 </a>
               </li>
-              <li>
+              <li class="icon-search">
                 <a href="searchProducts.html">
                   <i class="icon ph ph-list-magnifying-glass text-purple-900"></i>
                   <span class="text text-purple-900">Поиск товаров</span>
                 </a>
               </li>
 
-              <li>
-                <a href="404.html">
-                  <i class="icon ph ph-star text-purple-900"></i>
-                  <span class="text text-purple-900">Избранное</span>
-                </a>
-              </li>
+               <li class="icon-star">
+                  <a href="404.html">
+                    <i class="icon ph ph-star text-purple-900"></i>
+                    <span class="text text-purple-900">Избранное</span>
+                  </a>
+                  <div class="circle-input">
+                    <p>0</p>
+                  </div>
+                </li>
             </ul>
           </div>
         </nav>
@@ -148,7 +151,7 @@
   </div>
 
   <div class="popup popup__type-profile-edit" id="popup">
-    <form action="" class="popup__form">
+    <form action="" class="popup__form" novalidate>
       <button class="button-close" id="button-close" type="submit">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 32 32">
           <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -197,11 +200,43 @@
           <p class="price" id="price-product"></p>
         </div>
         <div class="buy-product">
-          <button class="buy">Посмотреть товар</button>
+          <button class="buy button">Посмотреть товар</button>
         </div>
       </div>
     </li>
   </article>
 </template>
+
+
+<div class="popup-window-product popup">
+  <template id="template-product-modal">
+    <div class="content-product">
+      <div class="popup-content">
+        <div class="popup-content__image">
+          <img src='' alt="Изображение товара" id="popup-content__image">
+        </div>
+        <div class="popup-content__text">
+          <div class="box-text__product">
+            <div class="popup-content__title-product">
+              <h3 id="popup-content__title-product"></h3>
+            </div>
+            <div class="close-button">
+              <button class="button-close__popup button" type="button">закрыть</button>
+            </div>
+            <div class="bookmark-button">
+              <button class="bookmark__popup button" type="button" id="bookmark__button">
+                <i class="star-icons ph ph-star"></i>
+              </button>
+            </div>
+          </div>
+          <div class="popup-content__description">
+            <p id="popup-content__description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </template>
+</div>
 
 </html>
