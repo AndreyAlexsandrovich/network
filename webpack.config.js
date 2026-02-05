@@ -14,7 +14,7 @@ module.exports = (argv) => {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].js",
       assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
-      publicPath: '/',
+      publicPath: './',
       // clean: true,
     },
     mode: argv.mode || "development",
@@ -71,6 +71,7 @@ module.exports = (argv) => {
       new HtmlWebpackPlugin({
         template: "./src/index.html",
         filename: "index.html",
+        publicPath: './',
         minify: argv.mode === "production" ? { 
           removeComments: true,
           collapseWhitespace: true,

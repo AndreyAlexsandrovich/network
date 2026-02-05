@@ -9,7 +9,7 @@
     "homepage": "/network/",
     "gh-pages-clean": "rimraf node_modules/.cache/gh-pages",
     "predeploy": "npm run build",
-    "deploy": "npm run gh-pages-clean && gh-pages -d dist"
+    "deploy": "npm run build && echo ' ' > dist/.nojekyll && npx gh-pages -d dist --dotfiles"
   },
   "author": "",
   "license": "ISC",
