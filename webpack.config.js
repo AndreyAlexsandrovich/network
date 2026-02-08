@@ -14,7 +14,6 @@ module.exports = (argv) => {
         template: `./src/pages/${page}.html`,
         filename: `${page}.html`,
         chunks: ["main"],
-        publicPath: isProduction ? "./network/" : "/",
       }),
   );
   
@@ -26,7 +25,7 @@ module.exports = (argv) => {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].[contenthash].js",
       assetModuleFilename: path.join("images", "[name].[contenthash][ext]"),
-      publicPath: isProduction ? "./network/" : "/",
+      publicPath: isProduction ? "/network/" : "/",
     },
     mode: argv.mode || "development",
     devServer: {
@@ -81,7 +80,6 @@ module.exports = (argv) => {
       new HtmlWebpackPlugin({
         template: "./src/index.html",
         filename: "index.html",
-        publicPath: isProduction ? "./network/" : "/",
         minify:
           argv.mode === "production"
             ? {
