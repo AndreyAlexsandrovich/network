@@ -15,7 +15,7 @@ module.exports = (argv) => {
         filename: `${page}.html`,
         chunks: ["main"],
         publicPath: isProduction ? "./network/" : "/",
-      })
+      }),
   );
   
   return {
@@ -26,7 +26,7 @@ module.exports = (argv) => {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].[contenthash].js",
       assetModuleFilename: path.join("images", "[name].[contenthash][ext]"),
-      publicPath: isProduction ? "./network/" : "/",,
+      publicPath: isProduction ? "./network/" : "/",
     },
     mode: argv.mode || "development",
     devServer: {
