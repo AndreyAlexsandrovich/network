@@ -15,9 +15,9 @@ module.exports = (argv) => {
         filename: `${page}.html`,
         chunks: ["main"],
         publicPath: isProduction ? "./network/" : "/",
-
+      })
   );
-
+  
   return {
     entry: {
       main: "./src/index.ts",
@@ -81,7 +81,7 @@ module.exports = (argv) => {
       new HtmlWebpackPlugin({
         template: "./src/index.html",
         filename: "index.html",
-        publicPath: isProduction ? "./" : "/",
+        publicPath: isProduction ? "./network/" : "/",
         minify:
           argv.mode === "production"
             ? {
