@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = (argv) => {
   const isProduction = argv.mode === "production";
 
-  const pages = ["404", "registration", "bookmark", "searchProducts"];
+  const pages = ["404", "registration", "bookmark", "searchProducts", "home"];
 
   const htmlPlugins = pages.map(
     (page) =>
@@ -14,8 +14,8 @@ module.exports = (argv) => {
         template: `./src/pages/${page}.html`,
         filename: `${page}.html`,
         chunks: ["main"],
-        publicPath: isProduction ? "./" : "/",
-      })
+        publicPath: isProduction ? "./network/" : "/",
+
   );
 
   return {
