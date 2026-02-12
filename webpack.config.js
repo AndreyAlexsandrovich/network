@@ -2,6 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const publicPath = '/'
+
 
 module.exports = (argv) => {
   const isProduction = argv.mode === "production";
@@ -25,7 +27,7 @@ module.exports = (argv) => {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].[contenthash].js",
       assetModuleFilename: path.join("images", "[name].[contenthash][ext]"),
-      publicPath: isProduction ? "/root/" : "/",
+      publicPath: publicPath,
     },
     mode: argv.mode || "development",
     devServer: {
