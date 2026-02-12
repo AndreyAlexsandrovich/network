@@ -27,7 +27,7 @@ module.exports = (argv) => {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].[contenthash].js",
       assetModuleFilename: path.join("images", "[name].[contenthash][ext]"),
-      publicPath: publicPath,
+      publicPath: Production ?  publicPath : '/',
     },
     mode: argv.mode || "development",
     devServer: {
