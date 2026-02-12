@@ -2,14 +2,15 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const publicPath = isProduction ? '/network/' : '/';
 
 
 module.exports = (argv) => {
   const isProduction = argv.mode === "production";
-
+  
+  const publicPath = isProduction ? '/network/' : '/';
+  
   const pages = ["404", "registration", "bookmark", "searchProducts", "home"];
-
+  
   const htmlPlugins = pages.map(
     (page) =>
       new HtmlWebpackPlugin({
