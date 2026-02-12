@@ -1,5 +1,4 @@
 import openModal from "./modal";
-import bookMark from './bookmarkButton'
 export default function popupProductModal(container = document.body) {
     const popupWindow = document.querySelector('.popup-window-product.popup');
     function initialModalTemplate() { 
@@ -7,8 +6,8 @@ export default function popupProductModal(container = document.body) {
         if (existingContent) existingContent.remove();
 
          const template = document.querySelector('#template-product-modal') as HTMLTemplateElement;
+         if (!template) return;
          const templateModalProduct = template.content.cloneNode(true) as DocumentFragment;
-        bookMark(templateModalProduct);
         popupWindow?.appendChild(templateModalProduct);
     }
 

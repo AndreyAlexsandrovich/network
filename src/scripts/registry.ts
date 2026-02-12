@@ -13,7 +13,7 @@ export default function registerProfile() {
         const inputPhone = formRegistr.querySelector('.phone-input') as HTMLInputElement;
         const inputPassword = formRegistr.querySelector('.password-input') as HTMLInputElement;
         const inputImage = formRegistr.querySelector('.image-input') as HTMLInputElement;
-    
+
         const userData = {
             name: inputName,
             email: inputEmail,

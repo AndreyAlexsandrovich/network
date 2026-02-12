@@ -1,7 +1,7 @@
 import initSideBar from "./scripts/sidebarButton";
 import apiProducts from "./scripts/api";
 import createProduct from "./scripts/createProduct";
-// import searchProduct from "./scripts/searchProducts";
+import searchProduct from "./scripts/searchProducts";
 import registerProfile from './scripts/registry';
 import chagesProfile from './scripts/changesProfile'
 import Data from './scripts/profile';
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     createProduct();
   }
 
-  // if (document.querySelector("#form-search")) {
-  //   searchProduct(place);
-  // }
+  if (document.querySelector("#form-search")) {
+    searchProduct(place);
+  }
 
   if (document.querySelector('.popup__form')) {
     chagesProfile()
