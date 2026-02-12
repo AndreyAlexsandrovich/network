@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const publicPath = '/network/'
+const publicPath = '/'
 
 
 module.exports = (argv) => {
@@ -27,7 +27,7 @@ module.exports = (argv) => {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].[contenthash].js",
       assetModuleFilename: path.join("images", "[name].[contenthash][ext]"),
-      publicPath: isProduction ?  publicPath : '/',
+      publicPath:  publicPath,
     },
     mode: argv.mode || "development",
     devServer: {
